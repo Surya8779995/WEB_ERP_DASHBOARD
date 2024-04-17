@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample ERP Admin Panel</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-B4P/TdANhoiB1zuR2Ep+HxgSQBLiBBKTdikoM4A5i7PZbEB8Rj9Mrm4S+4lgpKb" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <div class="brand">Admin Panel</div>
+            <ul>
+                <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#users"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="#settings"><i class="fas fa-cogs"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <header>
+                <div class="header-content">
+                    <h1>Sample ERP Admin Panel</h1>
+                    <div class="header-icons">
+                        <button id="signOutBtn" onclick="signOut()"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+                        <button id="settingsBtn" onclick="openSettings()"><i class="fas fa-cog"></i> Settings</button>
+                    </div>
+                </div>
+            </header>
+
+            <section id="banner-section">
+                <div class="banner" style="background-color: #28a745;">
+                    <h2>Total Sales</h2>
+                    <p>$500,000</p>
+                </div>
+                <div class="banner" style="background-color: #007bff;">
+                    <h2>Total Credit</h2>
+                    <p>$100,000</p>
+                </div>
+                <div class="banner" style="background-color: #ffc107;">
+                    <h2>Pending Orders</h2>
+                    <p>20</p>
+                </div>
+                <div class="banner" style="background-color: #dc3545;">
+                    <h2>Shipped Orders</h2>
+                    <p>80</p>
+                </div>
+                <div class="banner" style="background-color: #17a2b8;">
+                    <h2>Product Stock</h2>
+                    <p>500 units</p>
+                </div>
+            </section>
+
+            <section id="dashboard-content">
+                <!-- Table -->
+                <div class="table-container">
+                    <h3>Recent Activity</h3>
+                    <table id="activityTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Chart -->
+                <div class="chart-container">
+                    <h3>Statistics</h3>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </section>
+
+            
+
+            <section id="line-chart-section">
+                <h2>Line Chart</h2>
+                <canvas id="lineChart" width="800" height="200">
+                    <h2>Line Chart</h2>
+                    <canvas id="lineChart"></canvas>
+                </canvas>
+                <canvas id="lineChart"></canvas>
+            </section>
+
+
+            <section id="dashboard-content">
+                <!-- Table -->
+                <div class="table-container">
+                    <table id="categoryTable">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Quantity</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be added here dynamically -->
+                        </tbody>
+                    </table>
+                    
+                </div>
+
+                <!-- Chart -->
+                <div class="table-container">
+                    <canvas id="doughnutChart" width="100" height="100">
+                        <h3>Statistics</h3>
+                       
+                    </canvas>
+                    
+                </div>
+            </section>
+
+            
+
+
+            <section id="product-order-section">
+                <h2>Product Orders</h2>
+                <table id="productOrderTable" class="sortable searchable">
+                    <thead>
+                        <tr>
+                            <th data-sortable="true">Order ID</th>
+                            <th data-sortable="true">Product Name</th>
+                            <th data-sortable="true">Quantity</th>
+                            <th data-sortable="true">Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <section id="add-order-section">
+                <h2>Add New Order</h2>
+                <form id="addOrderForm">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" name="productName" required>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" step="0.01" required>
+
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+
+                    <label for="customerEmail">Customer Email:</label>
+                    <input type="email" id="customerEmail" name="customerEmail" required>
+
+                    <label for="orderDate">Order Date:</label>
+                    <input type="date" id="orderDate" name="orderDate" required>
+
+                    <label for="status">Status:</label>
+                    <select id="status" name="status" required>
+                        <option value="Processing">Processing</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+                    <button type="button" onclick="addOrder()">Add Order</button>
+                    
+                </form>
+            </section>
+
+            <section id="settings-content">
+                <!-- Settings content goes here -->
+            </section>
+
+            <footer>
+                <p>&copy; 2023 Sample ERP Admin Panel</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="./jscript/scripts.js"></script>
+    <script src="./jscript/fetch_sales_data.js"></script>
+    <script src="./jscript/product_load.js"></script>
+<script>
+    function signOut() {
+        // Add sign-out
+        alert("Signing out...");
+        window.location.href = "index.html";
+    }
+
+    // Function to handle opening settings
+    function openSettings() {
+        // Add settings
+        alert("Opening settings...");
+    }
+    </script>
+
+</body>
+</html>

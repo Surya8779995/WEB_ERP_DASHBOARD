@@ -1,0 +1,20 @@
+[
+    { "category": "Electronics", "quantity": 200 },
+    { "category": "Clothing", "quantity": 150 },
+    { "category": "Home Appliances", "quantity": 120 },
+    { "category": "Books", "quantity": 80 },
+    { "category": "Toys", "quantity": 100 },
+    { "category": "Sports and Outdoors", "quantity": 90 },
+    { "category": "Beauty and Personal Care", "quantity": 60 },
+    { "category": "Furniture", "quantity": 30 },
+    { "category": "Kitchen and Dining", "quantity": 50 },
+    { "category": "Automotive", "quantity": 70 },
+    { "category": "Pet Supplies", "quantity": 65 },
+    { "category": "Musical Instruments", "quantity": 30 },
+    { "category": "Gaming Accessories", "quantity": 55 },
+    { "category": "Stationery", "quantity": 40 },
+    { "category": "Pet Supplies", "quantity": 65 },
+    { "category": "Musical Instruments", "quantity": 30 }
+]
+
+ 

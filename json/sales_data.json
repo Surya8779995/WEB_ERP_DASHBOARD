@@ -1,0 +1,14 @@
+[
+    {"month": "January", "sales": 50000, "credit": 15000, "expenses": 20000},
+    {"month": "February", "sales": 60000, "credit": 12000, "expenses": 18000},
+    {"month": "March", "sales": 75000, "credit": 18000, "expenses": 22000},
+    {"month": "April", "sales": 80000, "credit": 20000, "expenses": 25000},
+    {"month": "May", "sales": 90000, "credit": 22000, "expenses": 27000},
+    {"month": "June", "sales": 100000, "credit": 25000, "expenses": 30000},
+    {"month": "July", "sales": 110000, "credit": 28000, "expenses": 32000},
+    {"month": "August", "sales": 120000, "credit": 30000, "expenses": 35000},
+    {"month": "September", "sales": 130000, "credit": 32000, "expenses": 38000},
+    {"month": "October", "sales": 140000, "credit": 35000, "expenses": 40000},
+    {"month": "November", "sales": 150000, "credit": 38000, "expenses": 42000},
+    {"month": "December", "sales": 160000, "credit": 40000, "expenses": 45000}
+]

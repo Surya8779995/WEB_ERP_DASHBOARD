@@ -1,0 +1,9 @@
+
+[
+    { "date": "2023-01-01", "activity": "User logged in" },
+    { "date": "2023-01-02", "activity": "New data added" },
+    { "date": "2023-01-03", "activity": "System update completed" },
+    { "date": "2023-01-04", "activity": "Product created" },
+    { "date": "2023-01-05", "activity": "User registration" }
+   
+]
