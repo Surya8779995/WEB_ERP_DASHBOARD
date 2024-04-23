@@ -28,7 +28,7 @@ The Web-Based ERP Dashboard provides a user-friendly interface for accessing and
 
 ## Contributors
 
-- [Surya Selvam](https://github.com/Surya8779995)
+- [Surya Selvam](https://www.linkedin.com/in/suryaselvam2000/)
   
 - [Akash Tharindu Kumarasiri Rankira Dewayalage](https://www.linkedin.com/in/akash-tharindu/)
 
